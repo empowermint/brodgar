@@ -1,3 +1,5 @@
-node_modules
-.next
-*.pack
+.next/
+node_modules/
+/npm-debug.log
+.DS_Store
+out/
