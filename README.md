@@ -8,8 +8,12 @@ This project is a showcase website for the Brodgar Poetry/Sound Walk. Users on l
 
 The project is built using:
 
-- Next 12.3.1
 - React 18.2.0
+  - Next 12.3.1
+- Unified 10.1.2
+  - Remark 14.0.2
+  - Rehype 12.0.1
+- Greymatter 4.0.3
 
 ## Bootstrap
 
