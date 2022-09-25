@@ -1,5 +1,5 @@
-import getPageSlugs from '../lib/getPageSlugs';
-import getMarkdownContent from '../lib/getMarkdownContent';
+import getPageSlugs from '../lib/getPageSlugs.mjs';
+import getMarkdownContent from '../lib/getMarkdownContent.mjs';
 import Layout from '../components/Layout';
 
 export default function Page({title, description, content}){
