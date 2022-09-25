@@ -1,12 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
+import getMarkdownContent from '../lib/getMarkdownContent';
 
-export default function Home() {
+export default function Home({ title, description, content }) {
   return (
-    <Layout>
-      <p>Test content</p>
+    <Layout title={title} description={description}>
+      <div dangerouslySetInnerHTML={{__html: (content)}}></div>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const page = await getMarkdownContent('home', './content/');
+
+  return {
+    props: {
+      title: page.title,
+      description: page.description,
+      content: page.content
+    }
+  }
 }
