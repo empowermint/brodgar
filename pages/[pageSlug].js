@@ -2,7 +2,7 @@ import getPageSlugs from '../lib/getPageSlugs.mjs';
 import getMarkdownContent from '../lib/getMarkdownContent.mjs';
 import Layout from '../components/Layout';
 
-export default function Page({title, description, content}){
+export default function Page({ title, description, content }){
   return (
     <Layout title={title} description={description}>
       <article>
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const page = await getMarkdownContent(params.pageSlug, './content/pages/');
+  const { yaml, content } = await getMarkdownContent(params.pageSlug, './content/pages/');
 
   return {
     props: {
