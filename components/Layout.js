@@ -16,12 +16,12 @@ export default function Layout({ title, children, description }) {
         <Menu />
       </header>
       <main>{children}</main>
-      <!-- Footer goes here if we decide to use one -->
+      {/*Footer goes here if we decide to use one */}
     </>
   )
 }
 
 Layout.defaultProps = {
-  title: 'Brodgar Poetry/Sound Walk'
+  title: 'Brodgar Poetry/Sound Walk',
   description: 'A poetry/sound experience for Brodgar in Orkney'
 };
