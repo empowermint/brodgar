@@ -13,6 +13,7 @@ The project is built using:
 - Unified 10.1.2
   - Remark 14.0.2
   - Rehype 12.0.1
+- Greymatter 4.0.3
 
 ## Bootstrap
 
