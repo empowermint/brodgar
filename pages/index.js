@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import getMarkdownContent from '../lib/getMarkdownContent';
+import getMarkdownContent from '../lib/getMarkdownContent.mjs';
 
 export default function Home({ title, description, content }) {
   return (
