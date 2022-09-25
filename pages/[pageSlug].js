@@ -25,9 +25,9 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      title: page.title,
-      description: page.description,
-      content: page.content
+      title: yaml.title,
+      description: yaml.description,
+      content: content
     }
   }
 }
