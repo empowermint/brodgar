@@ -5,10 +5,8 @@ import Layout from '../components/Layout';
 export default function Page({ title, description, content }){
   return (
     <Layout title={title} description={description}>
-      <article>
-        <h1>{title}</h1>
-        <div className="post-content" dangerouslySetInnerHTML={{__html: (content)}}></div>
-      </article>
+      <h1>{title}</h1>
+      <div className="post-content" dangerouslySetInnerHTML={{__html: (content)}}></div>
     </Layout>
   )
 }
