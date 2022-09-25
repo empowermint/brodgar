@@ -10,7 +10,7 @@ export default function Home({ title, description, content }) {
 }
 
 export async function getStaticProps() {
-  const page = await getMarkdownContent('home', './content/');
+  const { yaml, content } = await getMarkdownContent('home', './content/');
 
   return {
     props: {
