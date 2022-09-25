@@ -19,4 +19,4 @@ export async function getStaticProps() {
       content: content
     }
   }
-}
+} // TODO: Remove index page and replace with [pageSlug] to remove repetition
