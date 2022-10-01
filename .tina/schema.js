@@ -1,7 +1,8 @@
-
 import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client'
 
+import { pages } from './collections/pages'
+import { poems } from './collections/poems'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -16,52 +17,8 @@ const schema = defineSchema({
     branch,
   },
   collections: [
-    {
-      label: 'Blog Posts',
-      name: 'post',
-      path: 'content/posts',
-      format: 'mdx',
-      ui: {
-        router: ({ document }) => {
-          // This can be used to add contextual editing to your site. See https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms for more information.
-          return `/demo/blog/${document._sys.filename}`
-        },
-      },
-      fields: [
-        {
-          type: 'string',
-          label: 'Title',
-          name: 'title',
-        },
-        {
-          type: 'rich-text',
-          label: 'Blog Post Body',
-          name: 'body',
-          isBody: true,
-          templates: [
-            {
-              name: 'PageSection',
-              label: 'Page Section',
-              fields: [
-                {
-                  type: 'string',
-                  name: 'heading',
-                  label: 'Heading',
-                },
-                {
-                  type: 'string',
-                  name: 'content',
-                  label: 'Content',
-                  ui: {
-                    component: 'textarea',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
+    pages,
+    poems
   ],
 })
 
