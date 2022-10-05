@@ -6,7 +6,7 @@ export const poems = {
   ui: {
     router: ({ document }) => {
       // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
-      return `/${document._sys.filename}`
+      return `/poems/${document._sys.filename}`
     },
   },
   fields: [
