@@ -11,10 +11,12 @@ export default function Page(props) {
     data: props.data,
   })
 
+  const { title, body } = data.pages
+
   return (
     <Layout> { /* TODO: Configure SEO descriptions */ }
-      <h1>{props.data.pages.title}</h1>
-      <TinaMarkdown content={props.data.pages.body} />
+      <h1>{title}</h1>
+      <TinaMarkdown content={body} />
     </Layout>
   )
 }
