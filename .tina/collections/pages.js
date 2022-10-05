@@ -6,7 +6,7 @@ export const pages = {
   ui: {
     router: ({ document }) => {
       // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
-      return `/content/pages/${document._sys.filename}`
+      return `/${document._sys.filename}`
     },
   },
   fields: [
