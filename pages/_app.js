@@ -1,12 +1,7 @@
-import Tina from '../.tina/components/TinaDynamicProvider.js'
 import '../styles/globals.css'
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <Tina>
-      <Component {...pageProps} />
-    </Tina>
-  )
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
 }
 
-export default App
+export default MyApp
