@@ -3,12 +3,12 @@ export const pages = {
   name: 'pages',
   path: '.tina/content/pages',
   format: 'mdx',
-  ui: {
-    router: ({ document }) => {
-      // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
-      return `/${document._sys.filename}`
-    },
-  },
+  // ui: { TODO: Enable contextual editing
+  //   router: ({ document }) => {
+  //     // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
+  //     return `/${document._sys.filename}`
+  //   },
+  // },
   fields: [
     {
       type: 'string',

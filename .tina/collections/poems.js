@@ -3,12 +3,12 @@ export const poems = {
   name: 'poems',
   path: '.tina/content/poems',
   format: 'json',
-  ui: {
-    router: ({ document }) => {
-      // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
-      return `/poems/${document._sys.filename}`
-    },
-  },
+  // ui: { TODO: Enable contextual editing
+  //   router: ({ document }) => {
+  //     // https://tina.io/docs/tinacms-context/#accessing-contextual-editing-from-the-cms
+  //     return `/poems/${document._sys.filename}`
+  //   },
+  // },
   fields: [
     {
       type: 'string',

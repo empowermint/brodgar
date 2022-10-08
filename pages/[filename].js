@@ -5,13 +5,14 @@ import client from '../.tina/__generated__/client'
 import Layout from '../components/Layout'
 
 export default function Page(props) {
-  const { data } = useTina({ // This function allows the CMS to alter page data in admin mode, and just passes the date through in production
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  })
+  // const { data } = useTina({ TODO: Enable contextual editing
+  //   // This function allows the CMS to alter page data in admin mode, and just passes the data through in production
+  //   query: props.query,
+  //   variables: props.variables,
+  //   data: props.data
+  // })
 
-  const { title, body } = data.pages
+  const { title, body } = props.data.pages
 
   return (
     <Layout> { /* TODO: Configure SEO descriptions */ }
@@ -34,7 +35,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { data, query, variables } = await client.queries.pages({ relativePath: `${params.filename}.mdx` })
-  
+
   return {
     props: {
       data, query, variables
