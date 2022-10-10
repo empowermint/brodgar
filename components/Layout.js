@@ -2,12 +2,12 @@ import Head from 'next/head';
 import Menu from './Menu';
 import Link from 'next/link';
 
-export default function Layout({ title, children, description }) {
+export default function Layout({ meta, children }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description}></meta>
+        <title>{meta.title} | Brodgar Poetry/Sound Walk</title>
+        <meta name="description" content={meta.description}></meta>
       </Head>
       <header className="header">
         <Link href="./">
@@ -16,12 +16,7 @@ export default function Layout({ title, children, description }) {
         <Menu />
       </header>
       <main>{children}</main>
-      {/*Footer goes here if we decide to use one */}
+      <footer>Content copyright © { new Date(Date.now()).getFullYear() } Stephanie Green and Sonja Heyer. All rights reserved.</footer>
     </>
   )
 }
-
-Layout.defaultProps = {
-  title: 'Brodgar Poetry/Sound Walk',
-  description: 'A poetry/sound experience for Brodgar in Orkney'
-};

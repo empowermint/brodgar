@@ -10,6 +10,21 @@ export default function Menu() {
               <a className="main-menu__link">Home</a>
             </Link>
           </li>
+          <li>
+            <Link href="/about">
+              <a className="main-menu__link">About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/poems">
+              <a className="main-menu__link">Take Part</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/poems">
+              <a className="main-menu__link">Experience Online</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build && next build",
-    "start": "tinacms build && next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@tinacms/cli": "^0.61.20",
+    "@mdx-js/loader": "^2.1.4",
+    "@mdx-js/react": "^2.1.4",
+    "@next/mdx": "^12.3.1",
     "gray-matter": "^4.0.3",
     "next": "^12.3.1",
     "react": "18.2.0",
@@ -19,8 +21,6 @@
     "remark": "^14.0.2",
     "remark-frontmatter": "^4.0.1",
     "remark-rehype": "^10.1.0",
-    "styled-components": "^5.3.6",
-    "tinacms": "^0.69.14",
     "unified": "^10.1.2"
   },
   "devDependencies": {
