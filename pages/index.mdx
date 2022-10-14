@@ -1,30 +1,11 @@
 import Layout from '../components/Layout'
-import Image from 'Next/Image'
+import Hero from '../components/Hero'
 
 export const meta = {
   title: "Home",
   description: "Experience the Brodgar Poetry/Sound Walk by Stephanie Green and Sonia Meyer"
 }
 
-<section class="hero">
-
-  <Image
-    alt="The ring of Brodgar standing stones at sunset"
-    src="/img/IMG_2145.jpg"
-    layout="fill"
-  />
-
-  <div class="hero-content">
-
-    # Brodgar Poetry/Sound Walk
-
-    <div class="hero-buttons">
-      <button>Walk in Person</button>
-      <button>Experience Online</button>
-    </div>
-
-  </div>
-
-</section>
+<Hero />
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>
