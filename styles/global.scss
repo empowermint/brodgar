@@ -128,8 +128,12 @@ header {
   }
 
   h1 {
-    filter: drop-shadow(0 2px 4px var(--brand));
+    filter: drop-shadow(3px 3px 4px black);
     font-weight: 900;
+    letter-spacing: .025em;
+    font-size: calc(1rem + 10vw);
+    line-height: 1em;
+    color: white;
   }
 
   .hero-content {
@@ -140,6 +144,60 @@ header {
     display: flex;
     gap: 2em;
     justify-content: end;
+  }
+
+  .hero-bg-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    filter: opacity(15%);
+    overflow: hidden;
+    user-select: none;
+    z-index: -10;
+    // writing-mode: vertical-rl; // Uncomment to make text vertical 
+    // text-orientation: mixed;
+    
+    span {
+      display: block;
+      color: white;
+      font-size: min(6em, 40vw);
+      line-height: .7em;
+      font-weight: 900;
+      white-space: nowrap;
+      animation: scroll 50s linear infinite;
+    }
+
+    span:nth-of-type(2n) {
+      animation-duration: 60s;
+      animation-delay: -1s;
+    }
+
+    span:nth-of-type(3n) {
+      animation-duration: 55s;
+    }
+
+    span:nth-of-type(4n) {
+      animation-duration: 45s;
+    }
+
+    span:nth-of-type(5n) {
+      animation-delay: -2s;
+    }
+
+  }
+
+  figcaption {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  @keyframes scroll {
+    from {transform: translateX(100%)} // Sub translateY to make animation vertical
+    to {transform: translateX(-200%)}
   }
   
 }
