@@ -16,7 +16,7 @@ export default function Menu() {
             </Link>
           </li>
           <li>
-            <Link href="/poems">
+            <Link href="/take-part">
               <a className="main-menu__link">Take Part</a>
             </Link>
           </li>
