@@ -69,6 +69,23 @@ p {
   max-width: 70ch;
 }
 
+// ### LINKS
+
+a {
+  text-decoration: underline;
+  transition: 150ms ease-out;
+}
+
+a:hover, a:active {
+  filter: drop-shadow(0 0 6px var(--brand));
+}
+
+@media (prefers-color-scheme: dark) {
+  a:hover, a:active {
+    filter: drop-shadow(0 0 6px white);
+  }
+}
+
 // ### BUTTONS
 
 button {
