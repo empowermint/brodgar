@@ -52,6 +52,18 @@ h2 {
   margin-block-end: min(calc(1rem + 5vw), 3rem);
 }
 
+h3 {
+  font-size: min(calc(1rem + 3vw), 3rem);
+  font-weight: 200;
+  margin-block-end: min(calc(1rem + 3vw), 2rem);
+}
+
+h4 {
+  font-size: min(calc(1rem + 1vw), 2rem);
+  font-weight: 200;
+  margin-block-end: min(calc(1rem + 1vw), 1rem);
+}
+
 p {
   font-size: 1.2rem;
   max-width: 70ch;
@@ -68,6 +80,7 @@ button {
   filter: opacity(85%);
   backdrop-filter: blur(5px);
   transition: 250ms ease-out;
+  font-size: 1.2em;
 }
 
 button:hover,
