@@ -11,7 +11,7 @@ export default function Layout({ meta, children }) {
       </Head>
       <header className="header">
         <Link href="./">
-          <a className="site-title"><h3>Brodgar Poetry/Sound Walk</h3></a>
+          <a className="site-title">Brodgar Poetry/Sound Walk</a>
         </Link>
         <Menu />
       </header>
