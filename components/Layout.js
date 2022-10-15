@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Menu from './Menu';
 import Link from 'next/link';
+import Menu from './Menu';
 
 export default function Layout({ meta, children }) {
   return (
@@ -11,12 +11,14 @@ export default function Layout({ meta, children }) {
       </Head>
       <header className="header">
         <Link href="./">
-          <a className="site-title"><h3>Brodgar Poetry/Sound Walk</h3></a>
+          <a className="site-title">Brodgar Poetry/Sound Walk</a>
         </Link>
         <Menu />
       </header>
       <main>{children}</main>
-      <footer>Content copyright © { new Date(Date.now()).getFullYear() } Stephanie Green and Sonja Heyer. All rights reserved.</footer>
+      <footer>
+        <p>Content copyright © { new Date(Date.now()).getFullYear() } Stephanie Green and Sonja Heyer. All rights reserved.</p>
+      </footer>
     </>
   )
 }

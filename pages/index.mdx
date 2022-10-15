@@ -1,13 +1,21 @@
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 
 export const meta = {
   title: "Home",
   description: "Experience the Brodgar Poetry/Sound Walk by Stephanie Green and Sonia Meyer"
 }
 
-# Brodgar Poetry/Sound Walk
+<Hero />
 
-<button>Walk in Person</button>
-<button>Experience Online</button>
+<section>
+
+## About
+
+The Brodgar Poetry/Sound Walk is a series of poem/sounds inspired by the neolithic Ring of Brodgar in Orkney.
+
+A collaboration between poet Stephanie Green and sound artist Sonia Meyer, the project builds on the success of *Berlin Umbrella*, etc etc etc
+
+</section>
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

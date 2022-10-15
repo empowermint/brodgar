@@ -1,26 +1,282 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,900;1,400&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+// ## RESET & BASE
 
 * {
   box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.4em;
+  font-family: 'Alegreya Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// ### COLOR
+
+body {
+  color: black;
+  background: white;
+  --brand: #32167A;
+  --brand-dark: #1D0D47;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
+  }
+}
+
+// ### TYPOGRAPHY
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-block-end: 3rem;
+}
+
+h2 {
+  font-size: min(calc(1rem + 5vw), 5rem);
+  font-weight: 200;
+  margin-block-end: min(calc(1rem + 5vw), 3rem);
+}
+
+h3 {
+  font-size: min(calc(1rem + 3vw), 3rem);
+  font-weight: 200;
+  margin-block-end: min(calc(1rem + 3vw), 2rem);
+}
+
+h4 {
+  font-size: min(calc(1rem + 1vw), 2rem);
+  font-weight: 200;
+  margin-block-end: min(calc(1rem + 1vw), 1rem);
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 80ch;
+}
+
+// ### LINKS
+
+a {
+  text-decoration: underline;
+  transition: 150ms ease-out;
+}
+
+a:hover, a:active {
+  filter: drop-shadow(0 0 6px var(--brand));
+}
+
+@media (prefers-color-scheme: dark) {
+  a:hover, a:active {
+    filter: drop-shadow(0 0 6px white);
+  }
+}
+
+// ### BUTTONS
+
+button {
+  background: var(--brand);
+  padding-inline: 1.5em;
+  padding-block: 1em;
+  border-radius: 10px;
+  border-style: none;
+  filter: opacity(85%);
+  backdrop-filter: blur(5px);
+  transition: 250ms ease-out;
+  font-size: 1.2em;
+}
+
+button:hover,
+button:active {
+  filter: opacity(95%) brightness(110%);
+}
+
+// ## PAGE LAYOUT
+
+#__next {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 1fr;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(auto, 80ch) minmax(0, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+section {
+  grid-column: 2 / 3;
+}
+
+// ## HEADER
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1.5em;
+  background: hsla(0 0% 0% / .5);
+  //filter: opacity(50%);
+  background-blend-mode: soft-light;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid black;
+
+  * {
+    margin: 0;
+    filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65))
+  }
+}
+
+.site-title {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+// ### MAIN MENU
+
+#main-menu {
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 2em;
+    font-weight: 200;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+// ## HOME PAGE
+
+.hero {
+  grid-column: 1 / -1;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
+  img {
+    z-index: -10;
+    filter: saturate(100%);
+  }
+
+  h1 {
+    filter: drop-shadow(3px 3px 4px black);
+    font-weight: 900;
+    letter-spacing: .025em;
+    font-size: calc(1rem + 6vw);
+    line-height: .9em;
+    color: white;
+  }
+
+  .hero-content {
+    margin-inline: max(1rem, 10vw);
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 2em;
+    justify-content: end;
+  }
+
+  .hero-bg-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    filter: opacity(15%);
+    overflow: hidden;
+    user-select: none;
+    z-index: -10;
+    // writing-mode: vertical-rl; // Uncomment to make text vertical 
+    // text-orientation: mixed;
+    
+    span {
+      display: block;
+      color: white;
+      font-size: min(6em, 40vw);
+      line-height: .65em;
+      font-weight: 900;
+      white-space: nowrap;
+      animation: scroll 60s linear infinite;
+    }
+
+    span:nth-of-type(2n) {
+      animation-duration: 70s;
+      animation-delay: -1s;
+    }
+
+    span:nth-of-type(3n) {
+      animation-duration: 65s;
+    }
+
+    span:nth-of-type(4n) {
+      animation-duration: 55s;
+    }
+
+    span:nth-of-type(5n) {
+      animation-delay: -2s;
+    }
+
+  }
+
+  figcaption {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  @keyframes scroll {
+    from {transform: translateX(100%)} // Sub translateY to make animation vertical
+    to {transform: translateX(-200%)}
+  }
+  
+}
+
+// ## FOOTER
+
+footer { 
+  font-weight: 300;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(to bottom, transparent, var(--brand-dark));
+
+  p {
+    border-top: 1px solid currentColor;
+    padding-block: .5em;
+    font-size: .9rem;
   }
 }
