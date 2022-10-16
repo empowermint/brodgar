@@ -105,6 +105,16 @@ button:active {
   filter: opacity(95%) brightness(110%);
 }
 
+// ## POETRY
+
+.pmd {
+  --turnover-indent: 1em;
+  display: block;
+  padding-inline-start: var(--turnover-indent);
+  text-indent: calc(var(--turnover-indent) * -1);
+  white-space: pre-wrap;
+}
+
 // ## PAGE LAYOUT
 
 #__next {
