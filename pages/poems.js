@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 
+import Lapwings from "../poems/deceit-of-lapwings.mdx"
 
 export default function Poems() {
   const meta = {
@@ -11,6 +12,7 @@ export default function Poems() {
     <Layout meta={meta}>
       <section>
         <h1>Section</h1>
+        <Lapwings />
       </section>
     </Layout>
   )
