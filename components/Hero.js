@@ -9,7 +9,7 @@ export default function Hero() {
         layout="fill"
       />
       <div className="hero-content">
-        <h1>Brodgar Poetry/Sound Walk</h1>
+        <h1>Rewilding: Brodgar Poetry/Sound Walk</h1>
         <div class="hero-buttons">
           <button>Walk in Person</button>
           <button>Experience Online</button>
