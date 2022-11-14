@@ -25,6 +25,7 @@ body {
   background: white;
   --brand: #32167A;
   --brand-dark: #1D0D47;
+  --warning: #E66140;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,6 +104,14 @@ button {
 button:hover,
 button:active {
   filter: opacity(95%) brightness(110%);
+}
+
+// ### WARNING DIV
+
+.warning {
+  padding: 1em;
+  border: 2px solid var(--warning);
+  border-radius: .5rem;
 }
 
 // ## POETRY
