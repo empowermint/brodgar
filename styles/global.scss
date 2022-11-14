@@ -179,6 +179,16 @@ header {
   width: 0;
   display: none;
 
+  ul {
+    font-weight: 200;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   :hover {
     display: flex;
     flex-direction: column nowrap;
@@ -205,13 +215,6 @@ header {
       flex-flow: row nowrap;
       justify-content: flex-end;
       gap: 2em;
-      font-weight: 200;
-      list-style: none;
-      text-transform: uppercase;
-    }
-  
-    a {
-      text-decoration: none;
     }
   
     .sub-menu {
