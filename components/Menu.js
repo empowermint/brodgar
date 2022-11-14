@@ -44,6 +44,9 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
+      <a href="#" id="menu-toggle">
+          <img src="brodgar-icon-min.svg" />
+      </a>
     </>
   )
 }
