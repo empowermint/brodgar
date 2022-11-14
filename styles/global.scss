@@ -151,6 +151,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5em;
   background: hsla(0 0% 0% / .5);
   background-blend-mode: soft-light;
@@ -198,6 +199,8 @@ header {
 
 #menu-toggle {
   width: 2rem;
+  display: flex;
+  place-items: center;
 
   img {
     max-width: 100%;
@@ -212,6 +215,7 @@ header {
 
     display: block;
     width: max-content;
+    height: 100%;
 
     ul {
       display: flex;
