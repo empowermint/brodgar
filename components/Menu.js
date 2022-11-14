@@ -20,7 +20,7 @@ export default function Menu() {
               <a className="main-menu__link">Biographies</a>
             </Link>
           </li>
-          <li>
+          <li class="sub-menu__parent">
             <Link href="/take-part">
               <a className="main-menu__link">Take Part</a>
             </Link>
