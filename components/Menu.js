@@ -44,8 +44,9 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
-      <a href="#" id="menu-toggle">
+      <a href="#" id="menu-toggle" aria-controls="main-menu">
           <img src="brodgar-icon-min.svg" />
+          <span class="sr-only">Menu</span>
       </a>
     </>
   )
