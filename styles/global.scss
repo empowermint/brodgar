@@ -159,7 +159,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1.5em;
   background: hsla(0 0% 0% / .5);
   background-blend-mode: soft-light;
@@ -177,6 +177,7 @@ header {
 
 .site-title {
   font-size: 1.2rem;
+  line-height: 2rem;
   text-decoration: none;
 }
 
@@ -184,25 +185,50 @@ header {
 
 #main-menu {
 
-  height: 0;
-  width: 0;
-  display: none;
-
   ul {
     font-weight: 200;
     list-style: none;
     text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  li {
+    line-height: 2rem;
   }
 
   a {
     text-decoration: none;
   }
 
-  :hover {
+}
+
+@media screen and (max-width: 751px) {
+  #main-menu {
     display: flex;
-    flex-direction: column nowrap;
+    align-items: center;
+
+    ul {
+      flex-flow: column nowrap;
+    }
+
+    .sub-menu {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 2em;
+    }
   }
 
+  .menu-hide {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .menu-show {
+    height: 100vh;
+  }
 }
 
 #menu-toggle {
@@ -220,11 +246,6 @@ header {
 
 @media screen and (min-width: 750px) {
   #main-menu {
-
-    display: block;
-    width: max-content;
-    height: 100%;
-
     ul {
       display: flex;
       flex-flow: row nowrap;
@@ -251,7 +272,6 @@ header {
         border-left: 1px solid var(--brand);
       }
     }
-  
   }
 
   #menu-toggle {
