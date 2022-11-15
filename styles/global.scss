@@ -147,6 +147,7 @@ main {
   grid-template-columns: minmax(0, 1fr) minmax(auto, 80ch) minmax(0, 1fr);
   grid-auto-rows: auto;
   gap: 1rem;
+  padding-block-start: 7em;
 }
 
 section {
@@ -311,6 +312,7 @@ header {
 
   .hero-content {
     margin-inline: max(1rem, 10vw);
+    transform: translateY(-5em);
   }
 
   .hero-buttons {
