@@ -1,9 +1,17 @@
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Menu() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    setIsNavExpanded(!isNavExpanded)
+  }
+
   return (
     <>
-      <nav id="main-menu">
+      <nav id="main-menu" className={isNavExpanded ? "menu-show" : "menu-hide"}>
         <ul className="main-menu">
           <li>
             <Link href="/">
@@ -20,7 +28,7 @@ export default function Menu() {
               <a className="main-menu__link">Biographies</a>
             </Link>
           </li>
-          <li>
+          <li class="sub-menu__parent">
             <Link href="/take-part">
               <a className="main-menu__link">Take Part</a>
             </Link>
@@ -44,6 +52,10 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
+      <a href="#" id="menu-toggle" aria-controls="main-menu" onClick={handleClick}>
+          <img src="brodgar-icon-min.svg" alt="Silhouette of the Ring of Brodgar" />
+          <span class="sr-only">Menu</span>
+      </a>
     </>
   )
 }

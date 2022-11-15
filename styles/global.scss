@@ -114,6 +114,14 @@ button:active {
   border-radius: .5rem;
 }
 
+// ## UTILS
+
+.sr-only {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 // ## POETRY
 
 .pmd {
@@ -139,6 +147,7 @@ main {
   grid-template-columns: minmax(0, 1fr) minmax(auto, 80ch) minmax(0, 1fr);
   grid-auto-rows: auto;
   gap: 1rem;
+  padding-block-start: 7em;
 }
 
 section {
@@ -151,9 +160,9 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 1.5em;
   background: hsla(0 0% 0% / .5);
-  //filter: opacity(50%);
   background-blend-mode: soft-light;
   backdrop-filter: blur(8px);
   position: fixed;
@@ -163,13 +172,16 @@ header {
 
   * {
     margin: 0;
-    filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65))
   }
+
+  --filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65));
 }
 
 .site-title {
   font-size: 1.2rem;
+  line-height: 2rem;
   text-decoration: none;
+  filter: var(--filter);
 }
 
 // ### MAIN MENU
@@ -177,19 +189,103 @@ header {
 #main-menu {
 
   ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    gap: 2em;
     font-weight: 200;
     list-style: none;
     text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  li {
+    line-height: 2rem;
+    filter: var(--filter);
   }
 
   a {
     text-decoration: none;
   }
 
+  .sub-menu {
+    padding: 0;
+    
+    li {
+      width: max-content;
+      padding-inline: 1em;
+    }
+  }
+
+}
+
+@media screen and (max-width: 751px) {
+  #main-menu {
+    display: flex;
+    align-items: center;
+
+    ul {
+      flex-flow: column nowrap;
+    }
+
+    .sub-menu {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 2em;
+    }
+  }
+
+  .menu-hide {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .menu-show {
+    height: 100vh;
+  }
+}
+
+#menu-toggle {
+  width: 2rem;
+  display: flex;
+  place-items: center;
+
+  img {
+    max-width: 100%;
+    @media (prefers-color-scheme: dark) {
+      filter: invert(100%);
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #main-menu {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      gap: 2em;
+    }
+  
+    .sub-menu {
+      display: none;
+      background: hsla(0 0% 0% / .5);
+      background-blend-mode: soft-light;
+      backdrop-filter: blur(8px);
+      padding-block: .5em;
+    }
+  
+    .sub-menu__parent:hover .sub-menu {
+      display: block;
+      position: absolute;
+      left: -1em;
+    }
+  }
+
+  #menu-toggle {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 // ## HOME PAGE
@@ -216,6 +312,7 @@ header {
 
   .hero-content {
     margin-inline: max(1rem, 10vw);
+    transform: translateY(-5em);
   }
 
   .hero-buttons {
