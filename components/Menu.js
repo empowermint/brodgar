@@ -28,7 +28,7 @@ export default function Menu() {
               <a className="main-menu__link">Biographies</a>
             </Link>
           </li>
-          <li class="sub-menu__parent">
+          <li className="sub-menu__parent">
             <Link href="/take-part">
               <a className="main-menu__link">Take Part</a>
             </Link>
@@ -54,7 +54,7 @@ export default function Menu() {
       </nav>
       <a href="#" id="menu-toggle" aria-controls="main-menu" onClick={handleClick}>
           <img src="brodgar-icon-min.svg" alt="Silhouette of the Ring of Brodgar" />
-          <span class="sr-only">Menu</span>
+          <span className="sr-only">Menu</span>
       </a>
     </>
   )
