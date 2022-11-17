@@ -8,66 +8,95 @@
   color: inherit;
 }
 
-html,
-body {
-  font-size: 1rem;
-  line-height: 1.4em;
-  font-family: 'Alegreya Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+* {
   margin: 0;
   padding: 0;
 }
 
 // ### COLOR
 
-body {
-  color: black;
-  background: white;
+html {
+  color-scheme: light;
+  --text: #1D0D47;
+  --dark: #1D0D47;
+  --bg: #FAF7FF;
+  --light: #FAF7FF;
   --brand: #32167A;
   --brand-dark: #1D0D47;
+  --brand-light: #7D5FC7;
+  --link: #334FA3;
   --warning: #E66140;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    --text: #FAF7FF;
+    --bg: #110828;
+    --link: #94adf8;
   }
+}
 
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  color: var(--text);
+  background: var(--bg);
 }
 
 // ### TYPOGRAPHY
 
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Alegreya Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+}
+
+// #### HEADINGS
+
 h1 {
-  font-size: 5rem;
-  margin: 0;
-  margin-block-end: 3rem;
+  font-size: clamp(3rem, 10vw, 5rem);
 }
 
 h2 {
-  font-size: min(calc(1rem + 5vw), 5rem);
-  font-weight: 200;
-  margin-block-end: min(calc(1rem + 5vw), 3rem);
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  transform: translateX(-.08em); // Corrects frame alignment issue in font
 }
 
 h3 {
-  font-size: min(calc(1rem + 3vw), 3rem);
-  font-weight: 200;
-  margin-block-end: min(calc(1rem + 3vw), 2rem);
+  font-size: clamp(1.2rem, 6vw, 2.5rem);
+  transform: translateX(-.05em); // Corrects frame alignment issue in font
 }
 
 h4 {
-  font-size: min(calc(1rem + 1vw), 2rem);
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h2, h4, h5, h6 {
   font-weight: 200;
-  margin-block-end: min(calc(1rem + 1vw), 1rem);
+}
+
+// #### BODY TEXT
+
+p, li, ul {
+  font-size: 1.1rem;
+  max-width: 80ch;
 }
 
 p {
-  font-size: 1.2rem;
-  max-width: 80ch;
+  margin-block-end: 1.6em;
+}
+
+li, ul {
+  margin-block: .8em;
 }
 
 // ### LINKS
@@ -75,24 +104,17 @@ p {
 a {
   text-decoration: underline;
   transition: 150ms ease-out;
-}
-
-a:hover, a:active {
-  filter: drop-shadow(0 0 6px var(--brand));
-}
-
-@media (prefers-color-scheme: dark) {
-  a:hover, a:active {
-    filter: drop-shadow(0 0 6px white);
-  }
+  color: var(--link);
 }
 
 // ### BUTTONS
 
 button {
   background: var(--brand);
+  color: var(--light);
   padding-inline: 1.5em;
   padding-block: 1em;
+  margin-block-end: 1.6em;
   border-radius: 10px;
   border-style: none;
   filter: opacity(85%);
@@ -109,9 +131,14 @@ button:active {
 // ### WARNING DIV
 
 .warning {
-  padding: 1em;
+  padding-inline: 1em;
   border: 2px solid var(--warning);
   border-radius: .5rem;
+  margin-block-end: 1.6em;
+
+  p {
+    margin-block: 0.8em;
+  }
 }
 
 // ## UTILS
@@ -162,19 +189,26 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.5em;
-  background: hsla(0 0% 0% / .5);
   background-blend-mode: soft-light;
   backdrop-filter: blur(8px);
   position: fixed;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text);
 
   * {
     margin: 0;
   }
 
-  --filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65));
+  a {
+    color: var(--text);
+  }
+
+  a:hover, a:active {
+    filter: drop-shadow(0 0 7px var(--text));
+  }
+
+  --filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65)); // Why?
 }
 
 .site-title {
@@ -198,6 +232,7 @@ header {
   }
 
   li {
+    font-size: 1rem;
     line-height: 2rem;
     filter: var(--filter);
   }
@@ -268,9 +303,10 @@ header {
   
     .sub-menu {
       display: none;
-      background: hsla(0 0% 0% / .5);
-      background-blend-mode: soft-light;
-      backdrop-filter: blur(8px);
+      background: var(--bg);
+      border-radius: .3em;
+      //blend-mode: soft-light;
+      //backdrop-filter: blur(8px);
       padding-block: .5em;
     }
   
@@ -388,7 +424,6 @@ footer {
   padding: 2rem 1rem 1rem;
   display: grid;
   place-content: center;
-  background: linear-gradient(to bottom, transparent, var(--brand-dark));
 
   p {
     border-top: 1px solid currentColor;
