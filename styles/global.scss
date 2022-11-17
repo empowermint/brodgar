@@ -114,6 +114,7 @@ button {
   color: var(--light);
   padding-inline: 1.5em;
   padding-block: 1em;
+  margin-block-end: 1.6em;
   border-radius: 10px;
   border-style: none;
   filter: opacity(85%);
@@ -133,6 +134,11 @@ button:active {
   padding-inline: 1em;
   border: 2px solid var(--warning);
   border-radius: .5rem;
+  margin-block-end: 1.6em;
+
+  p {
+    margin-block: 0.8em;
+  }
 }
 
 // ## UTILS
