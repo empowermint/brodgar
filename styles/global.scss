@@ -77,9 +77,17 @@ h4 {
   margin-block-end: min(calc(1rem + 1vw), 1rem);
 }
 
-p {
-  font-size: 1.2rem;
+p, li, ul {
+  font-size: 1.1rem;
   max-width: 80ch;
+}
+
+p {
+  margin-block: 1.6em;
+}
+
+li, ul {
+  margin-block: .8em;
 }
 
 // ### LINKS
@@ -113,7 +121,7 @@ button:active {
 // ### WARNING DIV
 
 .warning {
-  padding: 1em;
+  padding-inline: 1em;
   border: 2px solid var(--warning);
   border-radius: .5rem;
 }
@@ -209,6 +217,7 @@ header {
   }
 
   li {
+    font-size: 1rem;
     line-height: 2rem;
     filter: var(--filter);
   }
