@@ -1,0 +1,160 @@
+// ## RESET & BASE
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// ### COLOR
+
+html {
+  color-scheme: light;
+  --text: #1D0D47;
+  --dark: #1D0D47;
+  --bg: #FAF7FF;
+  --light: #FAF7FF;
+  --brand: #32167A;
+  --brand-dark: #1D0D47;
+  --brand-light: #7D5FC7;
+  --link: #334FA3;
+  --warning: #E66140;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    --text: #FAF7FF;
+    --bg: #110828;
+    --link: #94adf8;
+  }
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+// ### TYPOGRAPHY
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,900;1,400&display=swap');
+
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Alegreya Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+}
+
+// #### HEADINGS
+
+h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  transform: translateX(-.08em); // Corrects frame alignment issue in font
+}
+
+h3 {
+  font-size: clamp(1.2rem, 6vw, 2.5rem);
+  transform: translateX(-.05em); // Corrects frame alignment issue in font
+}
+
+h4 {
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h2, h4, h5, h6 {
+  font-weight: 200;
+}
+
+// #### BODY TEXT
+
+p, li, ul {
+  font-size: 1.1rem;
+  max-width: 80ch;
+}
+
+p {
+  margin-block-end: 1.6em;
+}
+
+li, ul {
+  margin-block: .8em;
+}
+
+// ### LINKS
+
+a {
+  text-decoration: underline;
+  transition: 150ms ease-out;
+  color: var(--link);
+}
+
+// ### BUTTONS
+
+button {
+  background: var(--brand);
+  color: var(--light);
+  padding-inline: 1.5em;
+  padding-block: 1em;
+  margin-block-end: 1.6em;
+  border-radius: 10px;
+  border-style: none;
+  filter: opacity(85%);
+  backdrop-filter: blur(5px);
+  transition: 250ms ease-out;
+  font-size: 1.2em;
+}
+
+button:hover,
+button:active {
+  filter: opacity(95%) brightness(110%);
+}
+
+// ### WARNING DIV
+
+.warning {
+  padding-inline: 1em;
+  border: 2px solid var(--warning);
+  border-radius: .5rem;
+  margin-block-end: 1.6em;
+
+  p {
+    margin-block: 0.8em;
+  }
+}
+
+// ## UTILS
+
+.sr-only {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+// ## POETRY
+
+.pmd {
+  --turnover-indent: 1em;
+  display: block;
+  padding-inline-start: var(--turnover-indent);
+  text-indent: calc(var(--turnover-indent) * -1);
+  white-space: pre-wrap;
+}
