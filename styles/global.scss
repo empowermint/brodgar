@@ -20,23 +20,30 @@ body {
 
 // ### COLOR
 
-body {
-  color: black;
-  background: white;
+html {
+  color-scheme: light;
+  --text: #1D0D47;
+  --dark: #1D0D47;
+  --bg: #FAF7FF;
+  --light: #FAF7FF;
   --brand: #32167A;
   --brand-dark: #1D0D47;
+  --brand-light: #7D5FC7;
+  --link: #334FA3;
   --warning: #E66140;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    --text: #FAF7FF;
+    --bg: #110828;
   }
+}
 
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  color: var(--text);
+  background: var(--bg);
 }
 
 // ### TYPOGRAPHY
@@ -75,22 +82,14 @@ p {
 a {
   text-decoration: underline;
   transition: 150ms ease-out;
-}
-
-a:hover, a:active {
-  filter: drop-shadow(0 0 6px var(--brand));
-}
-
-@media (prefers-color-scheme: dark) {
-  a:hover, a:active {
-    filter: drop-shadow(0 0 6px white);
-  }
+  color: var(--link);
 }
 
 // ### BUTTONS
 
 button {
   background: var(--brand);
+  color: var(--light);
   padding-inline: 1.5em;
   padding-block: 1em;
   border-radius: 10px;
@@ -162,19 +161,26 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.5em;
-  background: hsla(0 0% 0% / .5);
   background-blend-mode: soft-light;
   backdrop-filter: blur(8px);
   position: fixed;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text);
 
   * {
     margin: 0;
   }
 
-  --filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65));
+  a {
+    color: var(--text);
+  }
+
+  a:hover, a:active {
+    filter: drop-shadow(0 0 7px var(--text));
+  }
+
+  --filter: drop-shadow(0 0 15px hsla(0 0% 0% / .65)); // Why?
 }
 
 .site-title {
@@ -268,9 +274,10 @@ header {
   
     .sub-menu {
       display: none;
-      background: hsla(0 0% 0% / .5);
-      background-blend-mode: soft-light;
-      backdrop-filter: blur(8px);
+      background: var(--bg);
+      border-radius: .3em;
+      //blend-mode: soft-light;
+      //backdrop-filter: blur(8px);
       padding-block: .5em;
     }
   
@@ -388,7 +395,6 @@ footer {
   padding: 2rem 1rem 1rem;
   display: grid;
   place-content: center;
-  background: linear-gradient(to bottom, transparent, var(--brand-dark));
 
   p {
     border-top: 1px solid currentColor;
