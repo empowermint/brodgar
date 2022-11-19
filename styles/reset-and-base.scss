@@ -148,13 +148,3 @@ button:active {
   height: 0;
   overflow: hidden;
 }
-
-// ## POETRY
-
-.pmd {
-  --turnover-indent: 1em;
-  display: block;
-  padding-inline-start: var(--turnover-indent);
-  text-indent: calc(var(--turnover-indent) * -1);
-  white-space: pre-wrap;
-}

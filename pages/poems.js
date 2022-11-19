@@ -1,4 +1,5 @@
 import Layout from "../components/Layout"
+import Photo from "../components/Photo"
 
 import Lapwings from "../poems/deceit-of-lapwings.mdx"
 import Ring from "../poems/at-the-ring-of-brodgar.mdx"
@@ -16,30 +17,53 @@ export default function Poems() {
   }
 
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} className="poetry-page">
       <section>
-        <Stone />
+        <Photo src="/img/photo s1.jpg" alt="TBC" />
+        <div className="poem">
+          <Stone />
+        </div>
       </section>
       <section>
-        <Lapwings />
+        <Photo src="/img/photo s2.jpg" alt="TBC" />
+        <div className="poem">
+          <Lapwings />
+        </div>
       </section>
       <section>
-        <Bumblebee />
+        <Photo src="/img/photo s3.jpg" alt="TBC" />
+        <div className="poem">
+          <Loch />
+        </div>
       </section>
       <section>
-        <Loch />
+      <Photo src="/img/photo s4.jpg" alt="TBC" />
+        <div className="poem">
+          <Bumblebee />
+        </div>
       </section>
       <section>
-        <Curlew /> 
+        <Photo src="/img/photo s5.jpg" alt="TBC" />
+        <div className="poem">
+          <Peewit />
+        </div>
       </section>
       <section>
-        <Birdsong />
+        <Photo src="/img/photo s6.jpg" alt="TBC" />
+        <div className="poem">
+          <Curlew /> 
+        </div>
       </section>
       <section>
-        <Peewit />
+        <div className="poem">
+          <Birdsong />
+        </div>
       </section>
       <section>
-        <Ring /> 
+        <Photo src="/img/photo s8.jpg" alt="TBC" />
+        <div className="poem">
+          <Ring /> 
+        </div>
       </section>
     </Layout>
   )
