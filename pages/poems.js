@@ -16,30 +16,46 @@ export default function Poems() {
   }
 
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} className="poetry-page">
       <section>
-        <Stone />
+        <div className="poem">
+          <Stone />
+        </div>
       </section>
       <section>
-        <Lapwings />
+        <div className="poem">
+          <Lapwings />
+        </div>
       </section>
       <section>
-        <Loch />
+        <div className="poem">
+          <Loch />
+        </div>
       </section>
       <section>
-        <Bumblebee />
+        <div className="poem">
+          <Bumblebee />
+        </div>
       </section>
       <section>
-        <Peewit />
+        <div className="poem">
+          <Peewit />
+        </div>
       </section>
       <section>
-        <Curlew /> 
+        <div className="poem">
+          <Curlew /> 
+        </div>
       </section>
       <section>
-        <Birdsong />
+        <div className="poem">
+          <Birdsong />
+        </div>
       </section>
       <section>
-        <Ring /> 
+        <div className="poem">
+          <Ring /> 
+        </div>
       </section>
     </Layout>
   )
