@@ -24,19 +24,19 @@ export default function Poems() {
         <Lapwings />
       </section>
       <section>
+        <Loch />
+      </section>
+      <section>
         <Bumblebee />
       </section>
       <section>
-        <Loch />
+        <Peewit />
       </section>
       <section>
         <Curlew /> 
       </section>
       <section>
         <Birdsong />
-      </section>
-      <section>
-        <Peewit />
       </section>
       <section>
         <Ring /> 

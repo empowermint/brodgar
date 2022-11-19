@@ -158,3 +158,16 @@ button:active {
   text-indent: calc(var(--turnover-indent) * -1);
   white-space: pre-wrap;
 }
+
+.pmd-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 50ch) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media screen and (min-width: 70ch) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
