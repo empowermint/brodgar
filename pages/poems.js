@@ -55,6 +55,7 @@ export default function Poems() {
         </div>
       </section>
       <section>
+        <Photo src="/img/photo s7.jpg" alt="TBC" />
         <div className="poem">
           <Birdsong />
         </div>
