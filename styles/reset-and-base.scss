@@ -42,7 +42,7 @@ body {
 
 // ### TYPOGRAPHY
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,600;0,900;1,400&display=swap');
 
 html,
 body {
@@ -93,6 +93,11 @@ p, li, ul {
 
 p {
   margin-block-end: 1.6em;
+}
+
+p strong {
+  font-weight: 600;
+  letter-spacing: .03em;
 }
 
 li, ul {
