@@ -6,12 +6,12 @@ export default function Layout({ meta, children }) {
   return (
     <>
       <Head>
-        <title>{meta.title} | Rewilding: Brodgar Poetry/Sound Walk</title>
+        <title>{meta.title} | Rewilding: Brodgar Umbrella Poetry Sound Walk</title>
         <meta name="description" content={meta.description}></meta>
       </Head>
       <header className="header">
         <Link href="./">
-          <a className="site-title">Rewilding</a>
+          <a className="site-title">Rewilding: Brodgar Umbrella</a>
         </Link>
         <Menu />
       </header>
