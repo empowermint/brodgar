@@ -24,8 +24,8 @@ export default function Menu() {
             </Link>
           </li>
           <li>
-            <Link href="/biographies">
-              <a className="main-menu__link">Biographies</a>
+            <Link href="/poet-sound-artist">
+              <a className="main-menu__link">The Poet and Sound Artist</a>
             </Link>
           </li>
           <li className="sub-menu__parent">
