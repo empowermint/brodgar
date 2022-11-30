@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Layout from '../components/Layout'
-import Photo from '../components/Photo'
 
+import imgSS from '../public/img/sonjia and stephanie.jpg'
 import imgSteph from '../public/img/steph.png'
 import imgSonja from '../public/img/sonja.png'
 import imgIngrid from '../public/img/ingrid.png'
@@ -14,8 +14,9 @@ export const meta = {
 
 <section>
 
-<Photo
-  src="/img/sonjia and stephanie.jpg"
+<Image
+  priority
+  src={imgSS}
   alt="Stephanie Green (poet) and Sonja Heyer (sound artist) at the RSPB Reserve, Brodgar, Orkney, July 2022."
 />
 

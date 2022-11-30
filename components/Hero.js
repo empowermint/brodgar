@@ -1,12 +1,12 @@
 import Image from 'next/image'
+import imgSunset from '../public/img/IMG_2145.jpg'
 
 export default function Hero() {
   return (
     <section class="hero">
       <Image
         alt="The ring of Brodgar standing stones at sunset"
-        src="/img/IMG_2145.jpg"
-        layout="fill"
+        src={imgSunset}
       />
       <div className="hero-content">
         <h1>Rewilding: Brodgar Umbrella Poetry Sound Walk</h1>
