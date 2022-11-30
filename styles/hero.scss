@@ -6,86 +6,39 @@
   display: grid;
   place-content: center;
 
-  img {
+  .hero-image {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     z-index: -10;
-    filter: saturate(100%);
-  }
 
-  h1 {
-    filter: drop-shadow(3px 3px 4px black);
-    font-weight: 900;
-    letter-spacing: .025em;
-    font-size: calc(1rem + 6vw);
-    line-height: .9em;
-    color: white;
+    img {
+      object-fit: cover;
+      filter: saturate(150%);
+      min-height: 100vh;
+    }
   }
 
   .hero-content {
     margin-inline: max(1rem, 10vw);
-    transform: translateY(-5em);
-  }
+    transform: translateY(-25%);
 
-  .hero-buttons {
-    display: flex;
-    gap: 2em;
-    justify-content: end;
-  }
-
-  .hero-bg-words {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    filter: opacity(15%);
-    overflow: hidden;
-    user-select: none;
-    z-index: -10;
-    // writing-mode: vertical-rl; // Uncomment to make text vertical 
-    // text-orientation: mixed;
-    
-    span {
-      display: block;
-      color: white;
-      font-size: min(6em, 40vw);
-      line-height: .65em;
+    h1 {
+      filter: drop-shadow(3px 3px 4px black);
       font-weight: 900;
-      white-space: nowrap;
-      animation: scroll 60s linear infinite;
+      letter-spacing: .025em;
+      font-size: calc(1rem + 6vw);
+      line-height: .9em;
+      color: white;
     }
 
-    span:nth-of-type(2n) {
-      animation-duration: 70s;
-      animation-delay: -1s;
+    .hero-buttons {
+      margin-block-start: 2rem;
+      display: flex;
+      gap: min(2em, 5vw);
+      justify-content: end;
     }
-
-    span:nth-of-type(3n) {
-      animation-duration: 65s;
-    }
-
-    span:nth-of-type(4n) {
-      animation-duration: 55s;
-    }
-
-    span:nth-of-type(5n) {
-      animation-delay: -2s;
-    }
-
   }
-
-  figcaption {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-
-  @keyframes scroll {
-    from {transform: translateX(100%)} // Sub translateY to make animation vertical
-    to {transform: translateX(-200%)}
-  }
-  
 }

@@ -122,8 +122,8 @@ button,
 a.button {
   background: var(--brand);
   color: var(--light);
-  padding-inline: 1.5em;
-  padding-block: 1em;
+  padding-inline: min(3vw, 1.5em);
+  padding-block: min(2vw, 1.5em);
   margin-block-end: 1.6em;
   border-radius: 10px;
   border-style: none;
@@ -170,3 +170,4 @@ audio {
   height: 0;
   overflow: hidden;
 }
+

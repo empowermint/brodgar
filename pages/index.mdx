@@ -1,11 +1,26 @@
+import Image from 'next/image'
+
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+
+import imgSunset from '../public/img/IMG_2145.jpg'
 
 export const meta = {
   title: "Home",
   description: "Experience the Brodgar Poetry/Sound Walk by Stephanie Green and Sonia Heyer"
 }
 
-<Hero />
+<section className="hero">
+  <div className="hero-image">
+    <Image alt="The ring of Brodgar standing stones at sunset" src={imgSunset}
+      priority placeholder="blur" />
+  </div>
+  <div className="hero-content">
+    <h1>Rewilding: Brodgar Umbrella Poetry Sound Walk</h1>
+    <div className="hero-buttons">
+      <a className="button">Take Part</a>
+      <a className="button">Experience Online</a>
+    </div>
+  </div>
+</section>
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>
