@@ -23,11 +23,6 @@ export default function Menu() {
               <a className="main-menu__link">About</a>
             </Link>
           </li>
-          <li>
-            <Link href="/who">
-              <a className="main-menu__link">Who</a>
-            </Link>
-          </li>
           <li className="sub-menu__parent">
             <Link href="/take-part">
               <a className="main-menu__link">Take Part</a>
@@ -44,6 +39,11 @@ export default function Menu() {
                 </Link>
               </li>
             </ul>
+          </li>
+          <li>
+            <Link href="/who">
+              <a className="main-menu__link">Who</a>
+            </Link>
           </li>
           <li>
             <Link href="/poems">
