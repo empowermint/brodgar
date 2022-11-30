@@ -6,40 +6,38 @@
   display: grid;
   place-content: center;
 
-  img {
+  .hero-image {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     z-index: -10;
-    filter: saturate(100%);
-  }
 
-  h1 {
-    filter: drop-shadow(3px 3px 4px black);
-    font-weight: 900;
-    letter-spacing: .025em;
-    font-size: calc(1rem + 6vw);
-    line-height: .9em;
-    color: white;
+    img {
+      object-fit: cover;
+      filter: saturate(150%);
+      min-height: 100vh;
+    }
   }
 
   .hero-content {
     margin-inline: max(1rem, 10vw);
-    transform: translateY(-5em);
-  }
+    transform: translateY(-20%);
 
-  .hero-buttons {
-    display: flex;
-    gap: 2em;
-    justify-content: end;
-  }
+    h1 {
+      filter: drop-shadow(3px 3px 4px black);
+      font-weight: 900;
+      letter-spacing: .025em;
+      font-size: calc(1rem + 6vw);
+      line-height: .9em;
+      color: white;
+    }
 
-  figcaption {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+    .hero-buttons {
+      display: flex;
+      gap: 2em;
+      justify-content: end;
+    }
   }
-
-  @keyframes scroll {
-    from {transform: translateX(100%)} // Sub translateY to make animation vertical
-    to {transform: translateX(-200%)}
-  }
-  
 }
