@@ -95,9 +95,13 @@ p {
   margin-block-end: 1.6em;
 }
 
-p strong {
+strong, b {
   font-weight: 600;
   letter-spacing: .03em;
+}
+
+em, i {
+  font-style: italic;
 }
 
 li, ul {
