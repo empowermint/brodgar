@@ -72,3 +72,25 @@ footer {
     font-size: .9rem;
   }
 }
+
+// ## BIOS
+
+.bio {
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 1em;
+  margin-block: 1.6rem;
+
+  @media screen and (min-width: 25rem) {
+    grid-template-columns: 9em 1fr;
+  }
+
+  @media screen and (min-width: 40rem) {
+    grid-template-columns: 12em 1fr;
+  }
+
+  img {
+    object-fit: scale-down;
+    object-position: 0 1.1em;
+  }
+}

@@ -1,5 +1,11 @@
+import Image from 'next/image'
 import Layout from '../components/Layout'
 import Photo from '../components/Photo'
+
+import imgSteph from '../public/img/steph.png'
+import imgSonja from '../public/img/sonja.png'
+import imgIngrid from '../public/img/ingrid.png'
+import imgLucy from '../public/img/lucy.png'
 
 export const meta = {
   title: "Who",
@@ -21,25 +27,67 @@ Stephanie has been visiting Orkney for many years including self-imposed writer�
 
 ## Biographies
 
-### Stephanie Green
 
-Stephanie Green (English/Irish) is a poet and writer based in Edinburgh. Her publications include a poetry pamphlet inspired by Shetland  ‘Flout’ (Happenstance, 2015), a novel for teenagers ‘The Triple Spiral’ (Walker Books, (1989) and drama-documentaries  broadcast on BBC, Radio Schools. She also reviews drama and theatre.  She is co-curator of PoetryLit, a monthly online poetry event started to counteract lockdown blues which has proved immensely popular and has global audiences.
 
-[www.stephaniegreen.org.uk](http://www.stephaniegreen.org.uk)
+<div className="bio">
 
-### Sonja Heyer
+  <Image src={imgSteph} alt="Stephanie Green" />
 
-Sonja Heyer (German/Berlin-based) is a sound artist renowned for her ‘Umbrella’ installations. She has studied Music, Anthropology and Sound Studies. Since 2010 she has had numerous exhibitions of sound installations in Germany (*klang orte berlin: berlin sonic places; Weltausstellung der Reformation*); Austria (*ars electronica*), Netherlands and Taiwan, as well as various broadcasts of her radio works, for instance for Deutschlandfunk Kultur, Hessischer Rundfunk and Ö1 (Austria). Her mobile sound installation UMBRELLA works with interviews, prose as well as poetry for immersive sound walks. Sonja Heyer lives as a musician, artist and scientist in Berlin and Mecklenburg/Vorpommern (Germany) 
+  <div>
 
-[www.sonjaheyer.de](http://www.sonjaheyer.de)
+    ### Stephanie Green
 
-### Ingrid Leonard
+    Stephanie Green (English/Irish) is a poet and writer based in Edinburgh. Her publications include a poetry pamphlet inspired by Shetland  ‘Flout’ (Happenstance, 2015), a novel for teenagers ‘The Triple Spiral’ (Walker Books, (1989) and drama-documentaries  broadcast on BBC, Radio Schools. She also reviews drama and theatre.  She is co-curator of PoetryLit, a monthly online poetry event started to counteract lockdown blues which has proved immensely popular and has global audiences.
 
-Ingrid Leonard, who provided the Orcadian pronunciation of bird names, is Orkney born and bred and lives in Orkney and Lithuania. She is a poet with two pamphlets published ‘Rammo in Stenness’ and ‘What the waves make’ (both Abersee Press, 2022) and  available in the Longship Bookshop, Kirkwall.
+    [www.stephaniegreen.org.uk](http://www.stephaniegreen.org.uk)
 
-### Lucy Alsop
+  </div>
 
-Lucy Alsop, Orkney-based, sings with the Mayfield Singers, with whom she performed in the St Magnus Festival in 2013, and the Battle of Jutland commemorations in 2016, televised on the BBC. She has also sung with the St Magnus Festival Choir and in 2018 sang the *Esurientes* solo in John Rutter’s *Magnificat* in the Winter Choir concert in St Magnus Cathedral.
+</div>
+
+<div className="bio">
+
+  <Image src={imgSonja} alt="Sonja Heyer" />
+
+  <div>
+
+    ### Sonja Heyer
+
+    Sonja Heyer (German/Berlin-based) is a sound artist renowned for her ‘Umbrella’ installations. She has studied Music, Anthropology and Sound Studies. Since 2010 she has had numerous exhibitions of sound installations in Germany (*klang orte berlin: berlin sonic places; Weltausstellung der Reformation*); Austria (*ars electronica*), Netherlands and Taiwan, as well as various broadcasts of her radio works, for instance for Deutschlandfunk Kultur, Hessischer Rundfunk and Ö1 (Austria). Her mobile sound installation UMBRELLA works with interviews, prose as well as poetry for immersive sound walks. Sonja Heyer lives as a musician, artist and scientist in Berlin and Mecklenburg/Vorpommern (Germany) 
+
+    [www.sonjaheyer.de](http://www.sonjaheyer.de)
+
+  </div>
+
+</div>
+
+<div className="bio">
+
+  <Image src={imgIngrid} alt="Ingrid Leonard" className="bio-img" />
+
+  <div>
+
+    ### Ingrid Leonard
+
+    Ingrid Leonard, who provided the Orcadian pronunciation of bird names, is Orkney born and bred and lives in Orkney and Lithuania. She is a poet with two pamphlets published ‘Rammo in Stenness’ and ‘What the waves make’ (both Abersee Press, 2022) and  available in the Longship Bookshop, Kirkwall.
+
+  </div>
+
+</div>
+
+<div className="bio">
+
+<Image src={imgLucy} alt="Lucy Alsop" className="bio-img" />
+
+  <div>
+
+    ### Lucy Alsop
+
+    Lucy Alsop, Orkney-based, sings with the Mayfield Singers, with whom she performed in the St Magnus Festival in 2013, and the Battle of Jutland commemorations in 2016, televised on the BBC. She has also sung with the St Magnus Festival Choir and in 2018 sang the *Esurientes* solo in John Rutter’s *Magnificat* in the Winter Choir concert in St Magnus Cathedral.
+
+  </div>
+
+</div>
 
 </section>
 
