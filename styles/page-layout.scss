@@ -82,15 +82,14 @@ footer {
   margin-block: 1.6rem;
 
   @media screen and (min-width: 25rem) {
-    grid-template-columns: 9em 1fr;
+    grid-template-columns: min(12em, 33vw) 1fr;
   }
 
-  @media screen and (min-width: 40rem) {
-    grid-template-columns: 12em 1fr;
+  div:first-of-type {
+    margin-block-start: 1.1em;
   }
 
   img {
-    object-fit: scale-down;
-    object-position: 0 1.1em;
+    border-radius: 1rem 0 1rem 0;
   }
 }
