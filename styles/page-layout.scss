@@ -93,3 +93,21 @@ footer {
     border-radius: 1rem 0 1rem 0;
   }
 }
+
+// ## SPONSOR LOGOS
+
+.logos {
+  display: flex;
+  place-content: center;
+  margin-top: 5rem;
+  
+  span {
+    width: clamp(5rem, 5rem + 12vw, 12rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    img {
+      filter: invert(100);
+    }
+  }
+}
