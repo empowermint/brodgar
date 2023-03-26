@@ -1,4 +1,7 @@
 import Layout from '../components/Layout'
+import Image from 'next/image'
+
+import logoCreativeScotland from '../public/img/Creative_Scotland_bw.png'
 
 export const meta = {
   title: "About",
@@ -32,6 +35,12 @@ Sound Artist, piano and percussion: Sonja Heyer
 Website: James T. Harding  
 Orcadian voice: Ingrid Leonard  
 Soprano: Lucy Alsop
+
+<div className="logos">
+  <span>
+    <Image src={logoCreativeScotland} alt="Creative Scotland logo" />
+  </span>
+</div>
 
 </section>
 
