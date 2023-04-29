@@ -37,56 +37,56 @@ export default function Poems() {
     <Layout meta={meta} className="poetry-page">
       <section>
         <Image src={imgStone} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 1.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p1.mp3" />
         <div className="poem">
           <Stone />
         </div>
       </section>
       <section>
       <Image src={imgLapwings} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 2.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p2.mp3" />
         <div className="poem">
           <Lapwings />
         </div>
       </section>
       <section>
         <Image src={imgLoch} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 3.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p3.mp3" />
         <div className="poem">
           <Loch />
         </div>
       </section>
       <section>
         <Image src={imgBumblebee} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 4.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p4.mp3" />
         <div className="poem">
           <Bumblebee />
         </div>
       </section>
       <section>
         <Image src={imgPeewit} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 5.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p5.mp3" />
         <div className="poem">
           <Peewit />
         </div>
       </section>
       <section>
         <Image src={imgCurlew} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 6.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p6.mp3" />
         <div className="poem">
           <Curlew /> 
         </div>
       </section>
       <section>
         <Image src={imgBirdsong} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 7.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p7.mp3" />
         <div className="poem">
           <Birdsong />
         </div>
       </section>
       <section>
         <Image src={imgRing} alt="TBC" />
-        <AudioPlayer src="./audio/Rewilding_ Brodgar UMBRELLA_verse 8.mp3" />
+        <AudioPlayer src="./audio/Rewilding_Brodgar_p8.mp3" />
         <div className="poem">
           <Ring /> 
         </div>
