@@ -2,17 +2,20 @@ import Layout from '../components/Layout'
 import Image from 'next/image'
 
 import logoCreativeScotland from '../public/img/Creative_Scotland_bw.png'
+import logoHES from '../public/img/historic-enviroment-scotland-logo.png'
+import logoRSPB from '../public/img/rspb-scotland-logo.png'
+import logoRangers from '../public/img/orkney-rangers-logo.png'
 
 export const meta = {
   title: "About",
-  description: "Learn more about Rewilding: Brodgar Umbrella Poetry/Sound Walk"
+  description: "Learn more about Rewilding: Brodgar Poetry/Sound Walk"
 }
 
 <section>
 
 # About
 
-**Rewilding: Brodgar Umbrella Poetry/Sound Walk**, inspired by the Ring of Brodgar and RSPB Brodgar Nature Reserve (Mainland Orkney), is a new multimedia installation centred on recordings of original poetry by poet Stephanie Green and natural sound recordings (wind, waves, birdsong) by sound artist, Sonja Heyer, plus some percussion, piano and song. You can listen to recordings through your own headphones starting at the iconic Neolithic stonehenge, the Ring of Brodgar, walk into the RSPB Reserve down through a wildflower meadow to Loch Stenness, returning to feel the mystical power of the Ring of Brodgar. You can also listen at home via this website.
+**Rewilding: Brodgar Poetry/Sound Walk**, inspired by the Ring of Brodgar and RSPB Brodgar Nature Reserve (Mainland Orkney), is a new multimedia installation centred on recordings of original poetry by poet Stephanie Green and natural sound recordings (wind, waves, birdsong) by sound artist, Sonja Heyer, plus some percussion, piano and song. You can listen to recordings through your own headphones starting at the iconic Neolithic stonehenge, the Ring of Brodgar, walk into the RSPB Reserve down through a wildflower meadow to Loch Stenness, returning to feel the mystical power of the Ring of Brodgar. You can also listen at home via this website.
 
 ## Save Endangered Species
 
@@ -37,8 +40,25 @@ Orcadian voice: Ingrid Leonard
 Soprano: Lucy Alsop
 
 <div className="logos">
+  <span className="invert-if-dark-mode">
+    <a href="https://www.creativescotland.com/">
+      <Image src={logoCreativeScotland} alt="Creative Scotland logo" />
+    </a>
+  </span>
+  <span className="bg-if-dark-mode">
+    <a href="https://www.historicenvironment.scot/">
+      <Image src={logoHES} alt="Historic Environment Scotland logo" />
+    </a>
+  </span>
+  <span className="bg-if-dark-mode">
+    <a href="https://www.rspb.org.uk/">
+      <Image src={logoRSPB} alt="Royal Society for the Protection of Birds logo" />
+    </a>
+  </span>
   <span>
-    <Image src={logoCreativeScotland} alt="Creative Scotland logo" />
+    <a href="https://www.historicenvironment.scot/learn/ranger-service/">
+      <Image src={logoRangers} alt="Historic Scotland Rangers Service logo" />
+    </a>
   </span>
 </div>
 
