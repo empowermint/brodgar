@@ -98,16 +98,24 @@ footer {
 
 .logos {
   display: flex;
-  place-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   margin-top: 5rem;
-  
-  span {
-    width: clamp(5rem, 5rem + 12vw, 12rem);
-  }
 
-  @media (prefers-color-scheme: dark) {
-    img {
-      filter: invert(100);
-    }
+  > span {
+    width: 9rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .invert-if-dark-mode {
+    filter: invert(100);
+  }
+  
+  .bg-if-dark-mode {
+    background: var(--light);
+    padding: .5rem;
   }
 }
