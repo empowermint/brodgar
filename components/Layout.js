@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Menu from './Menu';
 
-export default function Layout({ meta, children }) {
+export default function Layout({ meta, children, className }) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ export default function Layout({ meta, children }) {
         </Link>
         <Menu />
       </header>
-      <main>{children}</main>
+      <main className={className}>{children}</main>
       <footer>
         <p>Content copyright © { new Date(Date.now()).getFullYear() } Stephanie Green and Sonja Heyer. All rights reserved.</p>
       </footer>
