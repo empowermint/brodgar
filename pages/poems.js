@@ -36,56 +36,56 @@ export default function Poems() {
   return (
     <Layout meta={meta} className="poetry-page">
       <section>
-        <Image src={imgStone} alt="TBC" />
+        <Image src={imgStone} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p1.mp3" />
         <div className="poem">
           <Stone />
         </div>
       </section>
       <section>
-      <Image src={imgLapwings} alt="TBC" />
+      <Image src={imgLapwings} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p2.mp3" />
         <div className="poem">
           <Lapwings />
         </div>
       </section>
       <section>
-        <Image src={imgLoch} alt="TBC" />
+        <Image src={imgLoch} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p3.mp3" />
         <div className="poem">
           <Loch />
         </div>
       </section>
       <section>
-        <Image src={imgBumblebee} alt="TBC" />
+        <Image src={imgBumblebee} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p4.mp3" />
         <div className="poem">
           <Bumblebee />
         </div>
       </section>
       <section>
-        <Image src={imgPeewit} alt="TBC" />
+        <Image src={imgPeewit} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p5.mp3" />
         <div className="poem">
           <Peewit />
         </div>
       </section>
       <section>
-        <Image src={imgCurlew} alt="TBC" />
+        <Image src={imgCurlew} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p6.mp3" />
         <div className="poem">
           <Curlew /> 
         </div>
       </section>
       <section>
-        <Image src={imgBirdsong} alt="TBC" />
+        <Image src={imgBirdsong} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p7.mp3" />
         <div className="poem">
           <Birdsong />
         </div>
       </section>
       <section>
-        <Image src={imgRing} alt="TBC" />
+        <Image src={imgRing} sizes="100vw" alt="TBC" />
         <AudioPlayer src="./audio/Rewilding_Brodgar_p8.mp3" />
         <div className="poem">
           <Ring /> 
